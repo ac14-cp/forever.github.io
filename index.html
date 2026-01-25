@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Samtoine — For Samina</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <h1>Samina ❤️ Antoine</h1>
+    <p class="subtitle">Eternal fever for<br/>Confused, losing head (7) </p>
+
+    <div class="video-wrap">
+      <video id="proposalVideo" playsinline controls poster="assets/poster.svg" preload="metadata">
+        <source src="assets/WIN_20260125_22_44_57_Pro.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <button id="playBtn" class="play-btn" aria-hidden="true">▶</button>
+    </div>
+
+    <p class="caption">With all my love, Antoine</p>
+  </div>
+
+  <script>
+    const video = document.getElementById('proposalVideo');
+    const btn = document.getElementById('playBtn');
+    btn.addEventListener('click', () => {
+      video.play();
+      btn.style.display = 'none';
+    });
+    video.addEventListener('play', () => btn.style.display = 'none');
+    video.addEventListener('pause', () => btn.style.display = 'block');
+  </script>
+</body>
+</html>
